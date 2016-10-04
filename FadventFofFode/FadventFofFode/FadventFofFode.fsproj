@@ -59,6 +59,8 @@
     <Compile Include="Program.fs" />
     <None Include="App.config" />
     <Content Include="Day1Input.txt" />
+    <Compile Include="Day2.fs" />
+    <Content Include="Day2Input.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
