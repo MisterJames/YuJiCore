@@ -61,6 +61,8 @@
     <Content Include="Day1Input.txt" />
     <Compile Include="Day2.fs" />
     <Content Include="Day2Input.txt" />
+    <Compile Include="Day3.fs" />
+    <Content Include="Day3Input.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
