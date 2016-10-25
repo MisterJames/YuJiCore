@@ -1,7 +1,7 @@
 ﻿module Day3
 open System.IO
-//let dirPath = "C:\\Code\\YuJimmy\\FadventFofFode\\FadventFofFode\\"   // james
-let dirPath = "C:\Users\Corey\Documents\GitHub\YuJiCore\\FadventFofFode\\FadventFofFode\\"  // corey
+let dirPath = "C:\\Code\\YuJimmy\\FadventFofFode\\FadventFofFode\\"   // james
+//let dirPath = "C:\Users\Corey\Documents\GitHub\YuJiCore\\FadventFofFode\\FadventFofFode\\"  // corey
 // let dirPath = ""   // yujie
 
 let allArea = File.ReadAllText  (dirPath + "Day3Input.txt" )
