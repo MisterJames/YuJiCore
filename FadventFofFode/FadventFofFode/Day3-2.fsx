@@ -13,10 +13,12 @@ let move ((x, y)::_ as acc) dir =
     | 'v' -> (x, y+1)::acc
     | '<' -> (x-1, y)::acc
 
-input
-|> Seq.mapi (fun i x -> i%2, x)
-|> Seq.groupBy fst
-|> Seq.map (fun (_, gr) -> gr |> Seq.map snd)
-|> Seq.collect (Seq.fold move [(0, 0)])
-|> Seq.distinct
-|> Seq.length
+input                                         // [v,x,v,x,v,x]
+|> Seq.mapi (fun i x -> i%2, x)               // [(0,v),(1,x),(0,v),(1,x),(0,v),(1,x)]
+|> Seq.groupBy fst                            // [[(0,v),(0,v),(0,v)],[(1,x),(1,x),(1,x)]]
+|> Seq.map (fun (_, gr) -> gr                 // [0, [(0,v),(0,v),(0,v)]]          [1, [(1,x),(1,x),(1,x)]]
+                            |> Seq.map snd)   // [v,v,v]                           [x,x,x]
+|> Seq.collect (Seq.fold move [(0, 0)])       // [v,v,v] -> [(0,0),(0,1),(1,1)]    [x,x,x] -> [(0,0),(0,-1),(1,-1)]
+                                              // [(0,0),(0,1),(1,1),(0,0),(0,-1),(1,-1)]
+|> Seq.distinct                               // [(0,0),(0,1),(1,1),(0,-1),(1,-1)]
+|> Seq.length                                 // 5
