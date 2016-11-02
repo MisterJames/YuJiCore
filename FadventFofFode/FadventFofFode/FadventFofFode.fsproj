@@ -64,8 +64,7 @@
     <Compile Include="Day3.fs" />
     <Content Include="Day3Input.txt" />
     <None Include="Day3-2.fsx" />
-    <None Include="Scripts\load-references-debug.fsx" />
-    <None Include="Scripts\load-project-debug.fsx" />
+    <Compile Include="Day4.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
