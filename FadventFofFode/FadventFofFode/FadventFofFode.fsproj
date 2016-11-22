@@ -65,6 +65,8 @@
     <Content Include="Day3Input.txt" />
     <None Include="Day3-2.fsx" />
     <Compile Include="Day4.fsx" />
+    <None Include="Day5.fsx" />
+    <Content Include="Day5Input.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
